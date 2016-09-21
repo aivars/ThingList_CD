@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D36C8F451D90CF6F00216944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36C8F441D90CF6F00216944 /* AppDelegate.swift */; };
-		D36C8F471D90CF6F00216944 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36C8F461D90CF6F00216944 /* ViewController.swift */; };
+		D36C8F471D90CF6F00216944 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36C8F461D90CF6F00216944 /* MainVC.swift */; };
 		D36C8F4A1D90CF6F00216944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36C8F481D90CF6F00216944 /* Main.storyboard */; };
 		D36C8F4D1D90CF6F00216944 /* WhishList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D36C8F4B1D90CF6F00216944 /* WhishList.xcdatamodeld */; };
 		D36C8F4F1D90CF6F00216944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36C8F4E1D90CF6F00216944 /* Assets.xcassets */; };
@@ -21,12 +21,13 @@
 		D36C8F661D90DC4300216944 /* ItemType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36C8F5E1D90DC4300216944 /* ItemType+CoreDataProperties.swift */; };
 		D36C8F671D90DC4300216944 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36C8F5F1D90DC4300216944 /* Item+CoreDataClass.swift */; };
 		D36C8F681D90DC4300216944 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36C8F601D90DC4300216944 /* Item+CoreDataProperties.swift */; };
+		D36C8F6D1D92257800216944 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36C8F6C1D92257800216944 /* MaterialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D36C8F411D90CF6F00216944 /* WhishList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhishList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36C8F441D90CF6F00216944 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D36C8F461D90CF6F00216944 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D36C8F461D90CF6F00216944 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		D36C8F491D90CF6F00216944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D36C8F4C1D90CF6F00216944 /* WhishList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhishList.xcdatamodel; sourceTree = "<group>"; };
 		D36C8F4E1D90CF6F00216944 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		D36C8F5E1D90DC4300216944 /* ItemType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D36C8F5F1D90DC4300216944 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D36C8F601D90DC4300216944 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D36C8F6C1D92257800216944 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +74,10 @@
 		D36C8F431D90CF6F00216944 /* WhishList */ = {
 			isa = PBXGroup;
 			children = (
+				D36C8F6B1D92254100216944 /* View */,
 				D36C8F691D90DC5E00216944 /* Model */,
 				D36C8F441D90CF6F00216944 /* AppDelegate.swift */,
-				D36C8F461D90CF6F00216944 /* ViewController.swift */,
+				D36C8F461D90CF6F00216944 /* MainVC.swift */,
 				D36C8F481D90CF6F00216944 /* Main.storyboard */,
 				D36C8F4E1D90CF6F00216944 /* Assets.xcassets */,
 				D36C8F501D90CF6F00216944 /* LaunchScreen.storyboard */,
@@ -105,6 +108,14 @@
 				D36C8F601D90DC4300216944 /* Item+CoreDataProperties.swift */,
 			);
 			name = Generated;
+			sourceTree = "<group>";
+		};
+		D36C8F6B1D92254100216944 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D36C8F6C1D92257800216944 /* MaterialView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,9 +194,10 @@
 				D36C8F671D90DC4300216944 /* Item+CoreDataClass.swift in Sources */,
 				D36C8F4D1D90CF6F00216944 /* WhishList.xcdatamodeld in Sources */,
 				D36C8F631D90DC4300216944 /* Store+CoreDataClass.swift in Sources */,
+				D36C8F6D1D92257800216944 /* MaterialView.swift in Sources */,
 				D36C8F661D90DC4300216944 /* ItemType+CoreDataProperties.swift in Sources */,
 				D36C8F621D90DC4300216944 /* Image+CoreDataProperties.swift in Sources */,
-				D36C8F471D90CF6F00216944 /* ViewController.swift in Sources */,
+				D36C8F471D90CF6F00216944 /* MainVC.swift in Sources */,
 				D36C8F651D90DC4300216944 /* ItemType+CoreDataClass.swift in Sources */,
 				D36C8F641D90DC4300216944 /* Store+CoreDataProperties.swift in Sources */,
 				D36C8F451D90CF6F00216944 /* AppDelegate.swift in Sources */,
