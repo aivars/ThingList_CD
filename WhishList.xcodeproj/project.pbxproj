@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D34A2E651D922A800063625E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34A2E641D922A800063625E /* ItemCell.swift */; };
 		D36C8F451D90CF6F00216944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36C8F441D90CF6F00216944 /* AppDelegate.swift */; };
 		D36C8F471D90CF6F00216944 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36C8F461D90CF6F00216944 /* MainVC.swift */; };
 		D36C8F4A1D90CF6F00216944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D36C8F481D90CF6F00216944 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D34A2E641D922A800063625E /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		D36C8F411D90CF6F00216944 /* WhishList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhishList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36C8F441D90CF6F00216944 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D36C8F461D90CF6F00216944 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				D36C8F6C1D92257800216944 /* MaterialView.swift */,
+				D34A2E641D922A800063625E /* ItemCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34A2E651D922A800063625E /* ItemCell.swift in Sources */,
 				D36C8F671D90DC4300216944 /* Item+CoreDataClass.swift in Sources */,
 				D36C8F4D1D90CF6F00216944 /* WhishList.xcdatamodeld in Sources */,
 				D36C8F631D90DC4300216944 /* Store+CoreDataClass.swift in Sources */,
@@ -364,6 +368,7 @@
 				D36C8F581D90CF6F00216944 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
