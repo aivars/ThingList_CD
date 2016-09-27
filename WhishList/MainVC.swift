@@ -22,19 +22,44 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //generateTestData()
+        attemtFetch()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell") as! ItemCell
+        configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
+        return cell
+    }
+    
+    func configureCell(cell:ItemCell, indexPath: NSIndexPath){
+        //update cell
+        let item =  controller.object(at: indexPath as IndexPath)
+        cell.configureCell(item: item)
         
-        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let sections = controller.sections{
+            let sectioninfo = sections[section]
+            return sectioninfo.numberOfObjects
+        }
         return 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        
+        if let sections = controller.sections{
+            return sections.count
+        }
         return 0
+        
+    }
+    
+    // set table view size
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
     
     func attemtFetch(){
@@ -45,6 +70,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
+        self.controller = controller
         do{
             
             try controller.performFetch()
@@ -62,6 +88,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
         tableView.endUpdates()
     }
     
+    
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch (type) {
         case .insert:
@@ -78,6 +105,7 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             if let indexPath = indexPath {
                 let cell = tableView.cellForRow(at: indexPath) as! ItemCell
                 // update the cell data.
+                configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
             }
             break
         case.move:
@@ -90,6 +118,30 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFe
             break
         }
     }
+    
+    // Test data generation function
+    func generateTestData() {
+        
+        let item = Item(context: context)
+        item.title = "MacBook Pro"
+        item.price = 1800
+        item.details = "Wait for next Apple event. Hope that it will be released soon"
+        
+        let item2 = Item(context: context)
+        item2.title = "M5"
+        item2.price = 100000
+        item2.details = "This is a beautiful car. And one day, I will own it"
+        
+        let item3 = Item(context: context)
+        item3.title = "Bose Headphones"
+        item3.price = 300
+        item3.details = "It's so nice to able to block out everyone with the noice canceling tech"
+        
+        ad.saveContext()
+        
+    }
+    
+    
 
 }
 
